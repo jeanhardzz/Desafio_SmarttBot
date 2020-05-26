@@ -1,0 +1,8 @@
+.idea
+.pytest_cache
+.classes
+.mydoc
+tests/__pycache__/
+classes/__pycache__/
+data/saida.csv
+
