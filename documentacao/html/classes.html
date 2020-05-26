@@ -1,0 +1,388 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Classes Package &mdash; Desafio SmarttBot v0.1.4 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Tests Package" href="tests.html" />
+    <link rel="prev" title="Main" href="main.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Desafio SmarttBot
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Arquivos:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Modulos</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="main.html">Main</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Classes Package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#module-classes.dados">Classe Dados</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-classes.indicadores">Classe Indicadores</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tests.html">Tests Package</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Desafio SmarttBot</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="modules.html">Modulos</a> &raquo;</li>
+        
+      <li>Classes Package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/classes.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="classes-package">
+<h1>Classes Package<a class="headerlink" href="#classes-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-classes.dados">
+<span id="classe-dados"></span><h2>Classe Dados<a class="headerlink" href="#module-classes.dados" title="Permalink to this headline">¶</a></h2>
+<p>Esta classe esta sendo usada para ler um arquivo.csv de candlestisck e gerar uma saida.csv com indicadores.</p>
+<p>Essa classe se ultiliza da classe Indicadores para fazero calculos dos indicadores</p>
+<p>O arquivo saida.csv contem dois indicadores, sao eles:
+indicador-1: Representa as Médias Móveis Exponenciais
+indicador-2: Representa os Índices de Forças Relativas</p>
+<dl class="py class">
+<dt id="classes.dados.Dados">
+<em class="property">class </em><code class="sig-prename descclassname">classes.dados.</code><code class="sig-name descname">Dados</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">caminho_csv</span></em>, <em class="sig-param"><span class="n">pytest_val</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#classes.dados.Dados" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt id="classes.dados.Dados.corta_excesso">
+<code class="sig-name descname">corta_excesso</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span></em><span class="sig-paren">)</span><a class="headerlink" href="#classes.dados.Dados.corta_excesso" title="Permalink to this definition">¶</a></dt>
+<dd><p>Recebe um dataframe e retorna outro dataframe com datas inferiores a data_fim.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> – Dataframe</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>data_cortado</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="classes.dados.Dados.gera_csv_indicadores">
+<em class="property">property </em><code class="sig-name descname">gera_csv_indicadores</code><a class="headerlink" href="#classes.dados.Dados.gera_csv_indicadores" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gera um arquivo.csv com dois indicadores.</p>
+<p>indicador-1: Medias Móveis Exponenciais.
+indicador-2: Indice de Força Relativa.</p>
+<p>Para otimizar, faço um corte nos Dados no data_fim.
+Assumindo que os indicadores nao usaram dados após data_fim para cálculo.</p>
+<p>Após os calculos efetua-se a criação do arquivo.csv e garanto a criação do mesmo.
+Retornando False caso nao tenho efetuado a criação e True caso tenha sucesso</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="classes.dados.Dados.imprime_datas_inicio_fim">
+<code class="sig-name descname">imprime_datas_inicio_fim</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#classes.dados.Dados.imprime_datas_inicio_fim" title="Permalink to this definition">¶</a></dt>
+<dd><p>Usa a função print() para imprimir as datas inicio e fim.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="classes.dados.Dados.pesquisa_no_dataframe_o_intervalo_datas">
+<code class="sig-name descname">pesquisa_no_dataframe_o_intervalo_datas</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span></em><span class="sig-paren">)</span><a class="headerlink" href="#classes.dados.Dados.pesquisa_no_dataframe_o_intervalo_datas" title="Permalink to this definition">¶</a></dt>
+<dd><p>Recebe um data frame e devolve um novo dataframe no intervalo.</p>
+<p>O dataframe retorno esta no intervalo data_inicio - data_fim.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> – Dataframe.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>data_intervalo</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="classes.dados.Dados.preenche_data_fim">
+<code class="sig-name descname">preenche_data_fim</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data_fim</span></em><span class="sig-paren">)</span><a class="headerlink" href="#classes.dados.Dados.preenche_data_fim" title="Permalink to this definition">¶</a></dt>
+<dd><p>Testa se o valor é valido para ser a data fim.</p>
+<p>Primeiro faz um teste de ValueError para garantir que foi escrito
+uma data no formato exigido.</p>
+<p>E depois faz uma conversao de datetime para seconds since the epoch,
+que é um tipo de dado que conta a quantidade de segundos passados desde
+January 1, 1970, 00:00:00 (UTC).</p>
+<p>E por ultimo testa se a data fim é menor que a data inicio.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data_inicio</strong> – Inicio do intervalo.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="classes.dados.Dados.preenche_data_inicio">
+<code class="sig-name descname">preenche_data_inicio</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data_inicio</span></em><span class="sig-paren">)</span><a class="headerlink" href="#classes.dados.Dados.preenche_data_inicio" title="Permalink to this definition">¶</a></dt>
+<dd><p>Testa se o valor é valido para ser a data inicial.</p>
+<p>Primeiro faz um teste de ValueError para garantir que foi escrito
+uma data no formato exigido.</p>
+<p>E depois faz uma conversao de datetime para seconds since the epoch,
+que é um tipo de dado que conta a quantidade de segundos passados desde
+January 1, 1970, 00:00:00 (UTC).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data_inicio</strong> – Inicio do intervalo.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="classes.dados.Dados.tratando_dados_faltantes">
+<code class="sig-name descname">tratando_dados_faltantes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#classes.dados.Dados.tratando_dados_faltantes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retira do DataFrame todos os dados invalidos (NaN).</p>
+<p>Pesquisa em todas as colunas se há um valor do tipo Nan.
+Se houver, remove essa linha do DataFrame.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-classes.indicadores">
+<span id="classe-indicadores"></span><h2>Classe Indicadores<a class="headerlink" href="#module-classes.indicadores" title="Permalink to this headline">¶</a></h2>
+<p>Essa classe possui os metodos para calcular indicadores de candlesticks dado um DataFrame.</p>
+<p>Nenhuma das funções aqui deve alterar o DataFrame mas sim retornar o indicador
+no formato series ou lista, ou ate mesmo um DataFrame cópia do original.</p>
+<dl class="py class">
+<dt id="classes.indicadores.Indicadores">
+<em class="property">class </em><code class="sig-prename descclassname">classes.indicadores.</code><code class="sig-name descname">Indicadores</code><a class="headerlink" href="#classes.indicadores.Indicadores" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt id="classes.indicadores.Indicadores.calcula_indices_de_forca_relativa">
+<span id="classes.indicadores.Indicadores.calcula_indices_de_força_relativa"></span><code class="sig-name descname">calcula_indices_de_força_relativa</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">precos</span></em>, <em class="sig-param"><span class="n">n</span><span class="o">=</span><span class="default_value">14</span></em><span class="sig-paren">)</span><a class="headerlink" href="#classes.indicadores.Indicadores.calcula_indices_de_forca_relativa" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retorna uma lista com os índices de força relativa dado uma Serie de preços</p>
+<p>O indice de força relativa (RSI em inglês) foi desenvolvido por J. Welles Wilder.
+É um indice com escala de variação fixa, entre 0 e 100.
+Basicamente, quanto maior o indice (&gt;70) mais sobrevalorizada a ação esta
+e quanto menor o indice (&lt;30) mais subvalorizada a ação esta.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>precos</strong> – Serie</p></li>
+<li><p><strong>n</strong> – periodo</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>lista de rsi</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="classes.indicadores.Indicadores.calcula_medias_relativas">
+<code class="sig-name descname">calcula_medias_relativas</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dados</span></em><span class="sig-paren">)</span><a class="headerlink" href="#classes.indicadores.Indicadores.calcula_medias_relativas" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retorna uma serie com o calculo de todas as medias móveis exponenciais.</p>
+<p>Média Móvel Exponencial é basicamente a media ponderada do preço de fechamento
+dos ultimos N fechamentos, dando mais peso para os fechamentos mais próximos.
+Aqui o N é chamado de periodo, e estamos utilizando um periodo de 20.
+Dependendo do dataset, 20 periodos pode ser 20 minutos, 20 horas, 20 dias ou 20 anos.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>dados</strong> – DataFrame</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Serie</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="tests.html" class="btn btn-neutral float-right" title="Tests Package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="main.html" class="btn btn-neutral float-left" title="Main" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Jean Lucas Almeida Mota
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+.. Desafio SmartBot documentation master file, created by
+   sphinx-quickstart on Wed May 20 16:38:46 2020.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Documentação feita para o Desafio Técnico da SmarttBot's
+========================================================
+
+Projeto realizado pelo candidato Jean Lucas Almeida Mota para a vaga de Estágio de
+Desenvolvimento Estratégias de Investimento (Python), em Belo Horizonte/MG na Empresa
+SmarttBot.
+
+O Desafio técnico consiste na realização do cálculo de pelo menos dois indicadores
+técnicos, utilizando o data set: https://www.kaggle.com/mczielinski/bitcoin-historical-data/data#coinbaseUSD_1-min_data_2014-12-01_to_2019-01-09.csv
+
+Este projeto se propõe a realizar o cálculo das Médias Móveis Exponenciais e dos Índices
+de Força Relativa.
+
+Médias Móveis Exponenciais
+--------------------------
+
+Média Móvel Exponencial é uma media ponderada do preço dos ultimos N fechamentos de um ativo,
+dando mais peso para os fechamentos mais próximos.
+
+Sendo que o N é chamado de periodo, e esta sendo utilizando um periodo de 20. Dependendo do dataset,
+20 periodos podem ser 20 minutos, 20 horas, 20 dias ou 20 anos.
+
+No dataset utilizado 20 periodos representam 20 minutos.
+
+No arquivo data/saida.csv esse indicador está representado como 'indicador-1'
+
+Índices de Força Relativa
+-------------------------
+
+O indice de força relativa (RSI em inglês) foi desenvolvido por J. Welles Wilder. É um indice com
+escala de variação fixa, ou seja, varia entre 0 e 100.
+
+É usado para identificar a subvalorização ou sobrevalorização de um ativo. Exemplo: Quanto maior o
+indice (>70) mais sobrevalorizada o ativo esta, e quanto menor o indice (<30)
+mais subvalorizada o ativo esta.
+
+No arquivo data/saida.csv esse indicador está representado como 'indicador-2'
+
+Instruções para executar o código
+---------------------------------
+Baixe a versão mais recente do projeto em https://bitbucket.org/jeanhardzz/desafio_smartbot/downloads/?tab=tags
+
+Após baixado, através de linha de comando, dentro do diretorio do projeto execute:
+
+python main.py dd/mm/yy H:M dd/mm/yy H:M
+
+Sendo que dd/mm/yy H:M representa uma data e horário.
+Logo está sendo passado uma data e horário inicio e uma data e horário fim
+
+Se todos os passos foram feitos corretamente, sera mostrada a mensangem: O arquivo saida.csv foi criado
+com sucesso.
+Seguido de um preview do arquivo.
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Arquivos:
+
+   modules

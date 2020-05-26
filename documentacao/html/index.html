@@ -1,0 +1,247 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Documentação feita para o Desafio Técnico da SmarttBot’s &mdash; Desafio SmarttBot v0.1.4 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Modulos" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="#" class="icon icon-home"> Desafio SmarttBot
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Arquivos:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">Modulos</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">Desafio SmarttBot</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#">Docs</a> &raquo;</li>
+        
+      <li>Documentação feita para o Desafio Técnico da SmarttBot’s</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="documentacao-feita-para-o-desafio-tecnico-da-smarttbot-s">
+<h1>Documentação feita para o Desafio Técnico da SmarttBot’s<a class="headerlink" href="#documentacao-feita-para-o-desafio-tecnico-da-smarttbot-s" title="Permalink to this headline">¶</a></h1>
+<p>Projeto realizado pelo candidato Jean Lucas Almeida Mota para a vaga de Estágio de
+Desenvolvimento Estratégias de Investimento (Python), em Belo Horizonte/MG na Empresa
+SmarttBot.</p>
+<p>O Desafio técnico consiste na realização do cálculo de pelo menos dois indicadores
+técnicos, utilizando o data set: <a class="reference external" href="https://www.kaggle.com/mczielinski/bitcoin-historical-data/data#coinbaseUSD_1-min_data_2014-12-01_to_2019-01-09.csv">https://www.kaggle.com/mczielinski/bitcoin-historical-data/data#coinbaseUSD_1-min_data_2014-12-01_to_2019-01-09.csv</a></p>
+<p>Este projeto se propõe a realizar o cálculo das Médias Móveis Exponenciais e dos Índices
+de Força Relativa.</p>
+<div class="section" id="medias-moveis-exponenciais">
+<h2>Médias Móveis Exponenciais<a class="headerlink" href="#medias-moveis-exponenciais" title="Permalink to this headline">¶</a></h2>
+<p>Média Móvel Exponencial é uma media ponderada do preço dos ultimos N fechamentos de um ativo,
+dando mais peso para os fechamentos mais próximos.</p>
+<p>Sendo que o N é chamado de periodo, e esta sendo utilizando um periodo de 20. Dependendo do dataset,
+20 periodos podem ser 20 minutos, 20 horas, 20 dias ou 20 anos.</p>
+<p>No dataset utilizado 20 periodos representam 20 minutos.</p>
+<p>No arquivo data/saida.csv esse indicador está representado como ‘indicador-1’</p>
+</div>
+<div class="section" id="indices-de-forca-relativa">
+<h2>Índices de Força Relativa<a class="headerlink" href="#indices-de-forca-relativa" title="Permalink to this headline">¶</a></h2>
+<p>O indice de força relativa (RSI em inglês) foi desenvolvido por J. Welles Wilder. É um indice com
+escala de variação fixa, ou seja, varia entre 0 e 100.</p>
+<p>É usado para identificar a subvalorização ou sobrevalorização de um ativo. Exemplo: Quanto maior o
+indice (&gt;70) mais sobrevalorizada o ativo esta, e quanto menor o indice (&lt;30)
+mais subvalorizada o ativo esta.</p>
+<p>No arquivo data/saida.csv esse indicador está representado como ‘indicador-2’</p>
+</div>
+<div class="section" id="instrucoes-para-executar-o-codigo">
+<h2>Instruções para executar o código<a class="headerlink" href="#instrucoes-para-executar-o-codigo" title="Permalink to this headline">¶</a></h2>
+<p>Baixe a versão mais recente do projeto em <a class="reference external" href="https://bitbucket.org/jeanhardzz/desafio_smartbot/downloads/?tab=tags">https://bitbucket.org/jeanhardzz/desafio_smartbot/downloads/?tab=tags</a></p>
+<p>Após baixado, através de linha de comando, dentro do diretorio do projeto execute:</p>
+<p>python main.py dd/mm/yy H:M dd/mm/yy H:M</p>
+<p>Sendo que dd/mm/yy H:M representa uma data e horário.
+Logo está sendo passado uma data e horário inicio e uma data e horário fim</p>
+<p>Se todos os passos foram feitos corretamente, sera mostrada a mensangem: O arquivo saida.csv foi criado
+com sucesso.
+Seguido de um preview do arquivo.</p>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Arquivos:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">Modulos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="main.html">Main</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classes.html">Classes Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.html">Tests Package</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="modules.html" class="btn btn-neutral float-right" title="Modulos" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Jean Lucas Almeida Mota
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

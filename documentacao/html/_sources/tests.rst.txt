@@ -1,0 +1,20 @@
+Tests Package
+=============
+
+Testes Dados
+------------------------
+
+.. automodule:: tests.test_dados
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Testes Indicadores
+------------------------------
+
+.. automodule:: tests.test_indicadores
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+

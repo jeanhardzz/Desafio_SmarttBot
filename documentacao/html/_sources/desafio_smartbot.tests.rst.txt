@@ -1,0 +1,30 @@
+desafio\_smartbot.tests package
+===============================
+
+Submodules
+----------
+
+desafio\_smartbot.tests.test\_dados module
+------------------------------------------
+
+.. automodule:: desafio_smartbot.tests.test_dados
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+desafio\_smartbot.tests.test\_indicadores module
+------------------------------------------------
+
+.. automodule:: desafio_smartbot.tests.test_indicadores
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: desafio_smartbot.tests
+   :members:
+   :undoc-members:
+   :show-inheritance:

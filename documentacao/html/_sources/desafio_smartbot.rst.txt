@@ -1,0 +1,46 @@
+desafio\_smartbot package
+=========================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   desafio_smartbot.tests
+
+Submodules
+----------
+
+desafio\_smartbot.dados module
+------------------------------
+
+.. automodule:: desafio_smartbot.dados
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+desafio\_smartbot.indicadores module
+------------------------------------
+
+.. automodule:: desafio_smartbot.indicadores
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+desafio\_smartbot.main module
+-----------------------------
+
+.. automodule:: desafio_smartbot.main
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: desafio_smartbot
+   :members:
+   :undoc-members:
+   :show-inheritance:

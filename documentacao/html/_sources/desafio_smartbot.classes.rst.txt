@@ -1,0 +1,30 @@
+desafio\_smartbot.classes package
+=================================
+
+Submodules
+----------
+
+desafio\_smartbot.classes.dados module
+--------------------------------------
+
+.. automodule:: desafio_smartbot.classes.dados
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+desafio\_smartbot.classes.indicadores module
+--------------------------------------------
+
+.. automodule:: desafio_smartbot.classes.indicadores
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: desafio_smartbot.classes
+   :members:
+   :undoc-members:
+   :show-inheritance:

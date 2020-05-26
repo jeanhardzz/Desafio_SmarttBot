@@ -1,0 +1,18 @@
+Classes Package
+===============
+
+Classe Dados
+--------------------
+
+.. automodule:: classes.dados
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Classe Indicadores
+--------------------------
+
+.. automodule:: classes.indicadores
+   :members:
+   :undoc-members:
+   :show-inheritance:
