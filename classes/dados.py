@@ -10,9 +10,11 @@ indicador-2: Representa os Índices de Forças Relativas
 
 from datetime import datetime
 import time
-
 import pandas as pd
+import matplotlib.pyplot as plt
+
 from .indicadores import Indicadores
+
 
 
 class Dados:
@@ -30,6 +32,7 @@ class Dados:
         """
         self.dados = pd.read_csv(caminho_csv)
         self.pytest_val = pytest_val
+        self.dados_mes = None
 
     def tratando_dados_faltantes(self):
         """Retira do DataFrame todos os dados invalidos (NaN).
@@ -182,6 +185,64 @@ class Dados:
             print("Erro!")
             return False
 
+
+
+    def converte_timestamp_datetime(self,x):
+        """
+        Pega uma data no formato timestamp e tranforma em datetime
+        :return:
+        """
+        dt = datetime.utcfromtimestamp(x)
+        return dt
+
+
+
+    def gera_data_set_em_mes(self):
+        """
+        Gera um data set chamado self.dados_mes baseado no dataset em minutos mas
+        com o periodo convertido para meses.
+
+        :return:
+        """
+        #Primeiro criamos uma coluna de datetime em self.dados para trabalhar
+        self.dados['Datetime'] = self.dados['Timestamp'].apply(self.converte_timestamp_datetime)
+
+        #Criando novo Dataset em mes
+
+        ultima_data = self.dados['Datetime'][-1:].values  # 2019-01-07 22:06:00
+        ultima_data = ultima_data[0]
+        ultima_data = pd.to_datetime(ultima_data)
+
+        data_inicial = pd.to_datetime('12-01-2014 00:00')
+        dic_mes = {}
+        while (data_inicial < ultima_data):
+            selecao = (self.dados['Datetime'] >= data_inicial) & (self.dados['Datetime'] < data_inicial + pd.DateOffset(1))
+            aux = self.dados[selecao]
+
+            dic_mes[data_inicial.date()] = aux['Close'].mean()
+
+            data_inicial = data_inicial + pd.DateOffset(1)
+
+        self.dados_mes = pd.Series(dic_mes).to_frame('Close')
+        self.dados_mes.dropna(subset=self.dados_mes.columns, inplace=True)
+
+    def grafico_exp(self,data_1,data_2):
+
+
+        data_1 = pd.to_datetime(data_1)
+        data_2 = pd.to_datetime(data_2)
+
+        selecao = (self.dados_mes.index >= data_1) & (self.dados_mes.index <= data_2)
+        df_mes = self.dados_mes[selecao]
+
+        exp1 = df_mes['Close'].ewm(span=5, adjust=False).mean()
+        exp2 = df_mes['Close'].ewm(span=20, adjust=False).mean()
+
+        plt.plot(df_mes.index, df_mes['Close'], label='Fechamento')
+        plt.plot(df_mes.index, exp1, label='exp 5')
+        plt.plot(df_mes.index, exp2, label='exp 20')
+        plt.legend(loc='upper left')
+        plt.show()
 
     def __str__(self):
         """Propriedade __str__ que retorna o DataFrame carregado em dados

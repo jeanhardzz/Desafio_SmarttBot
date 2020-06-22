@@ -13,12 +13,11 @@ def main(args):
     """
     dados = Dados("data/coinbaseUSD_1-min_data_2014-12-01_to_2019-01-09.csv")
     dados.tratando_dados_faltantes()
-    print(len(args))
     if(len(args) == 5):
         data_inicio = args[1] +" "+args[2]
         test = dados.preenche_data_inicio(data_inicio)
     else:
-        test = False
+        test = True
 
     while (not test):
         data_inicio = input("Digite uma Data Incio (dd/mm/yy H:M):")
@@ -29,7 +28,7 @@ def main(args):
         data_fim = args[3] + " " + args[4]
         test = dados.preenche_data_fim(data_fim)
     else:
-        test = False
+        test = True
 
     while (not test):
         data_fim = input("Digite uma Data Fim (dd/mm/yy H:M):")
@@ -37,6 +36,10 @@ def main(args):
         if (not test): print("Data Fim invalida tente novamente...")
 
     dados.gera_csv_indicadores
+    dados.gera_data_set_em_mes()
+    dados.grafico_exp(data_inicio,data_fim)
+
+
 
 if __name__ == '__main__':
     sys.exit(main(sys.argv))
